@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    font-family: 'Khula', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+.start {
+    font-size: 25px;
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 600;
+    background: #0d09d87c;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    padding-top: 8px;
+    text-decoration: none;
+}
+
+.start::before {
+    content: '';
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+.start:active {
+    color: #000000;
+}
+.start:active::after {
+    background: transparent;
+}
+.start:hover::before {
+    opacity: 1;
+}
+.start::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0d09d87c;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@import 'https://fonts.googleapis.com/css?family=Russo+One';
+h2.aim {
+    border-top: 5px solid #e0dbde;
+    border-bottom: 5px solid #e0dbde;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+}
+@-webkit-keyframes move-background {
+    0% {
+        background-position: -300px 0;
+    }
+    100% {
+        background-position: 300px -300px;
+    }
+}
+@-moz-keyframes move-background {
+    0% {
+        background-position: -300px 0;
+    }
+    100% {
+        background-position: 300px -300px;
+    }
+}
+@keyframes move-background {
+    0% {
+        background-position: -300px 0;
+    }
+    100% {
+        background-position: 300px -300px;
+    }
+}
+.section-title {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    animation-play-state: running;
+    color: transparent;
+    background: url(https://obninsksite.ru/assets/theme/images/blog/square.svg)
+        no-repeat #ece7ea;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-animation: move-background 20s infinite linear alternate;
+    -moz-animation: move-background 20s infinite linear alternate;
+    animation: move-background 20s infinite linear alternate;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+    background: linear-gradient(90deg, #457cbb 0%, #a934e0 100%);
+    /* background: linear-gradient(90deg, #29323c 0%, #485563 100%); */
+}
+
+.screen.up {
+    margin-top: -100vh;
+}
+
+.colbackBC{
+    margin-left: 950px;
+    margin-top: 140px;
+}
+
+  .time-btn {
+    background-color:#42a5f5;
+    color:white;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:relative;
+    overflow:hidden;
+    margin: 0 20px;
+  }
+  
+  .time-btn:before {
+    content: "";
+    position: absolute;
+    height: 11px;
+    width: 100%;
+    background : #fff;
+    left: 0;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.3;
+  }
+  
+  .time-btn:hover:before {
+    bottom: 80%;
+  }
+
+.screen.ups{
+      margin-top: -200vh;
+  }
+
+.time-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.time-list li {
+    margin: 20px;
+}
+
+.colback1{
+    margin-left: 950px;
+    margin-top: 140px;
+}
+
+
+.hide {
+    opacity: 0;
+}
+
+.primary {
+    color: #16d9e3;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
+    box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.circle{
+    background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+}
